@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workstation monitor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div id="page">
+        <div id="sidebar">
+            <input type="button" value="≡" id="sidebar-hider">
+            <div id="left-pane">
+                <header id="title">Lab Monitoring</header>
+
+                <div id="lab-selection">
+                    <input type="button" value="Example" id="lab-button">
+                </div>
+
+                <div id="option-pane">
+                    <input type="button" value="Fetch" id="getData">
+                    <label for="address">Insert server address and port:</label>
+                    <input type="text" name="address" id="ip-address" autocomplete="off">
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div id="main-pane">
+            <div id="header-section">
+                <header id="title">Weather station dashboard</header>
+                <span id="fetch-result">Status: <span id="result"></span></span>
+            </div>
+            
+
+            <div id="dashboard-content">
+                <div id="left-section">
+
+                    <div class="heatmap-container">
+                        <canvas id="heatmap-canvas" width="600" height="400"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="tempChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="humChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="lumChart"></canvas>
+                    </div>
+
+                    <div id="air-quality">
+                        <span>Air quality: <span id="prediction">67%</span></span>
+                    </div>
+                </div>
+
+                <div id="workstations-menu">
+                    <h3>Workstations</h3>
+                    <div id="workstations-list">
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="data-section">
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
